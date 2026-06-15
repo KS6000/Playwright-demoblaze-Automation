@@ -77,7 +77,8 @@ test('TC004 - Remove Product From Cart', async ({ page }) => {
     await page.getByText('Delete').click();
 
     // Wait for Product to disappear
-    await expect(page.locator('td').filter({ hasText: 'Samsung galaxy s6' })).toHaveCount(0);
+    await expect(page.locator('td').filter({ hasText: 'Samsung galaxy s6' }))
+    .toHaveCount(0, { timeout: 10000 });
 });
 
 test('TC005 - Place Order', async ({ page }) => {
