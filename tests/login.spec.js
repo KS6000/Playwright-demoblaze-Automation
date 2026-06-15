@@ -20,6 +20,8 @@ test('TC001 - Valid Login', async ({ page }) => {
     // Click Login inside popup
     await page.locator('button[onclick="logIn()"]').click();
 
+    await page.waitForTimeout(2000);
+
     // Verify logout button visible
     await expect(page.locator('#logout2')).toBeVisible();
 
@@ -132,6 +134,8 @@ test('TC006 - Logout', async ({ page }) => {
 
     // Click Login inside popup
     await page.locator('button[onclick="logIn()"]').click();
+
+    await page.waitForTimeout(2000);
 
     // Verify logout button visible after login
     await expect(page.locator('#logout2')).toBeVisible();
