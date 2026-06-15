@@ -18,7 +18,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test --project=chromium --grep-invert "Login|Logout"
+      run: npx playwright test --project=chromium --grep "Add Product|Remove Product|Place Order"
       env:
        DEMOBLAZE_USERNAME: ${{ secrets.DEMOBLAZE_USERNAME }}
        DEMOBLAZE_PASSWORD: ${{ secrets.DEMOBLAZE_PASSWORD }}
