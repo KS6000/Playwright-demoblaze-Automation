@@ -18,6 +18,19 @@ The framework demonstrates modern UI automation practices including:
 - End-to-End Testing
 - Screenshot Evidence Collection
 
+## CI/CD Pipeline
+
+This project uses GitHub Actions to automatically execute Playwright tests on every push to the repository.
+
+### Pipeline Features
+
+- GitHub Actions
+- Playwright
+- Chromium Browser
+- Secure GitHub Secrets
+- Automated Test Execution
+- Playwright Report Artifacts
+
 ## Application Under Test
 
 Website:
