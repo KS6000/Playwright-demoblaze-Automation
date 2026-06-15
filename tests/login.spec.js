@@ -134,14 +134,11 @@ test('TC006 - Logout', async ({ page }) => {
     // Click Login inside popup
     await page.locator('button[onclick="logIn()"]').click();
 
-    await page.waitForTimeout(2000);
-
-    // Verify logout button visible after login
-    await expect(page.locator('#logout2')).toBeVisible();
-
-    // Logout
     await expect(page.locator('#nameofuser')).toContainText('Welcome', { timeout: 15000 });
     await expect(page.locator('#logout2')).toBeVisible({ timeout: 15000 });
+
+    // Logout
+    await page.locator('#logout2').click();
 
     // Verify login button visible again
     await expect(page.locator('#login2')).toBeVisible({ timeout: 15000 });
