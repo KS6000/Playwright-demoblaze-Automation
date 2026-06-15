@@ -2,6 +2,8 @@
 
 End-to-End UI Automation Framework using Playwright and JavaScript.
 
+[![Playwright Tests](https://github.com/KS6000/Playwright-demoblaze-Automation/actions/workflows/playwright.yml/badge.svg)](https://github.com/KS6000/Playwright-demoblaze-Automation/actions/workflows/playwright.yml)
+
 ## Project Overview
 
 This project automates key user journeys on the Demoblaze e-commerce website using Playwright.
