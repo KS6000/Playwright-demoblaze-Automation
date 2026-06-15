@@ -22,6 +22,8 @@ The framework demonstrates modern UI automation practices including:
 
 This project uses GitHub Actions to automatically execute Playwright tests on every push to the repository.
 
+[![Playwright Tests](https://github.com/KS6000/Playwright-demoblaze-Automation/actions/workflows/playwright.yml/badge.svg)](https://github.com/KS6000/Playwright-demoblaze-Automation/actions/workflows/playwright.yml)
+
 ### Pipeline Features
 
 - GitHub Actions
@@ -30,6 +32,7 @@ This project uses GitHub Actions to automatically execute Playwright tests on ev
 - Secure GitHub Secrets
 - Automated Test Execution
 - Playwright Report Artifacts
+- CI/CD Pipeline (GitHub Actions)
 
 ## Application Under Test
 
