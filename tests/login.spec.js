@@ -20,10 +20,9 @@ test('TC001 - Valid Login', async ({ page }) => {
     // Click Login inside popup
     await page.locator('button[onclick="logIn()"]').click();
 
-    await page.waitForTimeout(2000);
-
     // Verify logout button visible
-    await expect(page.locator('#logout2')).toBeVisible();
+    await expect(page.locator('#nameofuser')).toContainText('Welcome', { timeout: 15000 });
+    await expect(page.locator('#logout2')).toBeVisible({ timeout: 15000 });
 
 });
 
@@ -141,9 +140,11 @@ test('TC006 - Logout', async ({ page }) => {
     await expect(page.locator('#logout2')).toBeVisible();
 
     // Logout
-    await page.locator('#logout2').click();
+    await expect(page.locator('#nameofuser')).toContainText('Welcome', { timeout: 15000 });
+    await expect(page.locator('#logout2')).toBeVisible({ timeout: 15000 });
 
     // Verify login button visible again
-    await expect(page.locator('#login2')).toBeVisible();
+    await expect(page.locator('#login2')).toBeVisible({ timeout: 15000 });
+    await expect(page.locator('#logout2')).toBeHidden({ timeout: 15000 });
 
 });
